@@ -1,1 +1,7 @@
-blank readme
+A quick and silly library to add satellite trails to your matplotlib plots, for memes.
+
+```import satellize
+
+satellize.satellize(ax) # ax is some matplotlib axis
+
+# PROFIT```
