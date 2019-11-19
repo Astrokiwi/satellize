@@ -31,9 +31,7 @@ def satellize(ax,n=5,color='black',ls='--',**kwargs):
     
     sat_slopes = random.uniform(-2.,2.) * linear_slope
     dy = ymax-ymin
-    
-    print(ymin,ymax,xmin,xmax)
-    
+
     for line in range(n):
         y_cent = random.uniform(ymin,ymax)
         x_cent = random.uniform(xmin,xmax)
@@ -57,9 +55,7 @@ def satellize(ax,n=5,color='black',ls='--',**kwargs):
             else:
                 y1 = ymin
             x1 = (y1-y0)/sat_slopes+x0
-        
-        print(x0,x1,y0,y1)
-        
+            
         ax.plot([x0,x1],[y0,y1],color=color,ls=ls,**kwargs)
 
 
