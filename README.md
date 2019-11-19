@@ -1,4 +1,4 @@
-#satellize
+# satellize
 
 A quick and silly library to add satellite trails to your matplotlib plots, for memes.
 
