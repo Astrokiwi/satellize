@@ -16,9 +16,15 @@ def satellize(ax,n=5,color='black',ls='--',**kwargs):
     
     """
     
-    ymin, ymax = ax.get_ylim()
+    try:
+        ymin, ymax = ax.get_ylim()
+        xmin, xmax = ax.get_xlim()
+    except AttributeError:
+        ymin, ymax = ax.ylim()
+        xmin, xmax = ax.xlim()
+    
+
     if ymin>ymax: ymin,ymax = ymax,ymin
-    xmin, xmax = ax.get_xlim()
     if xmin>xmax: xmin,xmax = xmax,xmin
 
     linear_slope = (ymax-ymin)/(xmax-xmin)
@@ -63,7 +69,7 @@ def example(output="test.png"):
     fig,ax = plt.subplots()
     map = np.random.random((128,128))
     ax.imshow(map)
-    satellize(ax,color='white',n=10)
+    satellize(plt,color='white',n=10)
     fig.savefig(output)
 
 if __name__=='__main__':
