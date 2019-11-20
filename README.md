@@ -1,7 +1,7 @@
 # satellize
 
-A quick and silly library to add satellite trails to your matplotlib plots, for memes.
-
+A simple and important function that adds artificial satellite trails to a maplotlib axis, as caused by some hypothetical unnamed cluster of satellites
+    
 For quick tests:
 
 ```
@@ -17,3 +17,15 @@ For great justice:
 satellize.satellize(ax) # ax is some matplotlib axis object
 satellize.satellize(plt) # plt is the matplotlib.pyplot object
 ```
+
+Note that for convenience, you can bind this command to a shorter statement. For instance,
+
+```
+starlink = satellize.satellize
+starlink(ax)
+
+oneweb = satellize.satellize
+oneweb(ax)
+```
+
+etc
